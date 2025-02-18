@@ -1,0 +1,36 @@
+service: readit-lamdba
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-southeast-2
+  stage: ${opt:stage, 'development'}
+  deploymentBucket:
+    name: readit-lambda-deployments2
+    blockPublicAccess: true
+  httpApi:
+    disableDefaultEndpoint: false
+    metrics: false
+    cors: true
+  environment:
+    DB_CONNECTION_STRING: ${env:DB_CONNECTION_STRING}
+    JWT_SECRET: ${env:JWT_SECRET}
+
+functions:
+  app:
+    handler: src/serverless.handler
+    timeout: 10
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: '*'
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+    httpPort: 3000

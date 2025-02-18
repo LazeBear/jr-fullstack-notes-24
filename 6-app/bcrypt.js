@@ -1,6 +1,6 @@
 // playground
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const password = '12';
 

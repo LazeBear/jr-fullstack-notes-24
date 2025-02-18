@@ -122,3 +122,28 @@ super popular post, has 1M likes
 
 
 document 16MB
+
+
+aws
+mongodb atlas
+serverless
+
+
+AWS Lamdba - serverless
+AWS API Gateway
+
+serverless
+npm i -D serverless
+
+serverless.yml
+IaC infrastructure as code
+
+AWS S3
+AWS CloudFormation
+AWS Logs
+
+CI/CD
+
+
+github actions
+github setup aws access

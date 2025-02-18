@@ -1,0 +1,17 @@
+
+black box testing
+white box testing
+
+unit
+ - mock
+integration
+E2E (end to end)  - Cypress, playwright, selenium
+
+jest
+supertest
+mongodb -> memorydb
+
+TDD (test driven design)
+
+converage rate
+
